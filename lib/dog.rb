@@ -7,12 +7,13 @@ attr_accessor :name
 
 def initialize(name)
   @name = name
-  @@all << name
+  @@all << self
 end
 
 
 def self.all
-@@all
+@@all.each do |name|
+  puts name.name
 end
 
 
